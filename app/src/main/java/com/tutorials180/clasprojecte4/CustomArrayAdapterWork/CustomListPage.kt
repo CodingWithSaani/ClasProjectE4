@@ -13,7 +13,7 @@ class CustomListPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         customListPageBindingObject= ActivityCustomListPageBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_custom_list_page)
+        setContentView(customListPageBindingObject.root)
     }
 
     private fun createPlayerObjects()
@@ -40,6 +40,14 @@ class CustomListPage : AppCompatActivity() {
 
             var objAzharAli6=CricketPlayer("Azhar Ali","Right Hand Batsman",R.drawable.azhar_ali)
             var objMohammadBabarAzam6=CricketPlayer("Babar Azam","Right Hand Batsman",R.drawable.mohammad_babar_azam)
+
+            var listOfPlayers= listOf<CricketPlayer>(objMohammadBabarAzam,objAzharAli,
+                objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,
+                objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,
+            objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,
+            objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli,objMohammadBabarAzam,objAzharAli)
+
+            customListPageBindingObject.customListViewPage.adapter=CustomArrayAdapter(CustomListPage@this, listOfPlayers)
 
 
         }

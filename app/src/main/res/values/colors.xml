@@ -17,4 +17,5 @@
 
     <color name="new_color">#DD2424</color>
     <color name="bg_alert_screen">#8BC34A</color>
+    <color name="color_custom_row">#FFC107</color>
 </resources>

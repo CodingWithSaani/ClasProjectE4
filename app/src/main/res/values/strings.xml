@@ -16,4 +16,6 @@
     <string name="move_to_alert_screen_btn">Move to Alert Screen</string>
     <string name="show_dialog_btn">Show Dialog</string>
     <string name="move_to_list_screen_btn">Move to list screen</string>
+    <string name="player_name_title">Player Name:</string>
+    <string name="batting_style_text">Batting Style</string>
 </resources>
