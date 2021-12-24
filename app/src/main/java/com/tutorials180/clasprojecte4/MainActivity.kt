@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity()
             var userObject=User("Farrukh",123)
             objectIntent.putExtra("uObject",userObject)
             startActivity(objectIntent)
+
         }
         catch (ex:Exception)
         {

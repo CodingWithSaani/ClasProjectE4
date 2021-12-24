@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClasProjectE4">
         <activity
+            android:name=".SimpleRoomImplementation.SimpleRoomImpActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomArrayAdapterWork.CustomListPage"
             android:exported="false" />
         <activity
