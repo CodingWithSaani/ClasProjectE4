@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.tutorials180.clasprojecte4.AdaptersWork.ListTaskOne
 import com.tutorials180.clasprojecte4.Dialogs.AlertDialogScreen
+import com.tutorials180.clasprojecte4.SimpleRoomImplementation.SimpleRoomImpActivity
 
 class MainActivity : AppCompatActivity()
 {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity()
     private lateinit var moveToAlertDialogScreen:Button
 
     private lateinit var moveToListScreen:Button
+    private lateinit var moveToRoomScreen:Button //Declare
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +34,11 @@ class MainActivity : AppCompatActivity()
        moveToAlertDialogScreen=findViewById(R.id.move_to_alert_screen_btn)
 
        moveToListScreen=findViewById(R.id.move_to_list_screen_btn)
+       moveToRoomScreen=findViewById(R.id.move_to_room_screen_btn)
+
+       moveToRoomScreen.setOnClickListener {
+           startActivity(Intent(MainActivity@this,SimpleRoomImpActivity::class.java))
+       }
        moveBtn.setOnClickListener {
            moveToSecondPage()
        }

@@ -18,4 +18,5 @@
     <string name="move_to_list_screen_btn">Move to list screen</string>
     <string name="player_name_title">Player Name:</string>
     <string name="batting_style_text">Batting Style</string>
+    <string name="move_to_room_page">Move to room page</string>
 </resources>
