@@ -47,4 +47,14 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/room_std_fetch_record_btn"
+        android:text="Fetch Students Data"
+        android:layout_below="@id/room_std_save_record_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
 </RelativeLayout>

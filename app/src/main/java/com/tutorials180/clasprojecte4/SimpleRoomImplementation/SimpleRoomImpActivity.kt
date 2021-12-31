@@ -22,6 +22,32 @@ class SimpleRoomImpActivity : AppCompatActivity()
 
         createDb()
         mSimpleRoomBinding.roomStdSaveRecordBtn.setOnClickListener { addStudentData() }
+
+        mSimpleRoomBinding.roomStdFetchRecordBtn.setOnClickListener { getStudentsData() }
+    }
+
+    private fun getStudentsData()
+    {
+        try
+        {
+            val listOfStudents=mStudentDb.getStudentDaoObject().getAllStudents()
+            if(listOfStudents.isNotEmpty())
+            {
+               //We will show student data
+               Toast.makeText(applicationContext,
+                   "id of student: ${listOfStudents[0].id.toString()}" +
+                           "\n name of student:${listOfStudents[0].name}" +
+                           "\n email of student: ${listOfStudents[0].email}",Toast.LENGTH_LONG).show()
+            }
+            else
+            {
+                Toast.makeText(applicationContext,"No record found",Toast.LENGTH_LONG).show()
+            }
+        }
+        catch (ex:Exception)
+        {
+            Toast.makeText(applicationContext,ex.message,Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun addStudentData()
