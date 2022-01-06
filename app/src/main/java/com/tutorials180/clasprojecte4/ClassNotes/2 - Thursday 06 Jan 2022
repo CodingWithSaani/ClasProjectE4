@@ -1,0 +1,26 @@
+Class Learning Outcome:
+What is Recycler View?
+How to Implement Recycler View in Android App.
+
+----------------------------------------------
+RecyclerView App
+    a)Adapter -> RecyclerView.Adapter
+    b)Adapter View ->RecyclerView
+
+
+Step 1: We implemented the RecyclerView in xml file of our activity (activity_simple_room_imp.xml)
+Step 2: Create a new xml file (rv_single_row.xml)
+        This file will be used as model for our recycler view.
+        We create 6 TextViews to display student id, student name and student email
+        3 of TextViews will works as title
+        3 of TextViews will works as data containers
+
+Step 3: Create RVFiles packages
+        This package will contain all the files related to our recyclerview.
+Step 4: Create a new class with name RVCustomAdapter inside RVFiles package.
+        PurposeOfThisFile: We used this file as Custom Adapter for our recyclerview.
+        Step 4.1) Create an inner class with the name SingleRowViewHolder.
+                  PurposeOfThisFile: We used this class as ViewHolder for our rv_single_row.xml file.
+                  4.1.1 - We created a constructor with one view member(This view member basically hold the views inside our rv_single_row.xml)
+                  4.1.2 - We inherited RecyclerView.ViewHolder(singleRow) inside our SingleRowViewHolder class.
+        Step 4.2) We passed context variable and student list to constructor of our RVCustomAdapter class.

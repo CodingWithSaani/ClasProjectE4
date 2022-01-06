@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/bg_alert_screen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_id_title_tv"
+        android:padding="5dp"
+        android:text="Student ID :"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_id_tv"
+        android:layout_toRightOf="@id/rv_sr_std_id_title_tv"
+        android:padding="5dp"
+        android:text="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_name_title_tv"
+        android:layout_below="@id/rv_sr_std_id_title_tv"
+        android:padding="5dp"
+        android:text="Student Name :"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_name_tv"
+        android:layout_toRightOf="@id/rv_sr_std_name_title_tv"
+        android:layout_below="@id/rv_sr_std_id_tv"
+        android:padding="5dp"
+        android:text="Ali Raza"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_email_title_tv"
+        android:layout_below="@id/rv_sr_std_name_title_tv"
+        android:padding="5dp"
+        android:text="Student Email :"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_sr_std_email_tv"
+        android:layout_toRightOf="@id/rv_sr_std_email_title_tv"
+        android:layout_below="@id/rv_sr_std_name_tv"
+        android:padding="5dp"
+        android:text="ali@gmail.com"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_below="@id/rv_sr_std_email_tv"
+        android:layout_marginTop="4dp"/>
+
+
+
+</RelativeLayout>

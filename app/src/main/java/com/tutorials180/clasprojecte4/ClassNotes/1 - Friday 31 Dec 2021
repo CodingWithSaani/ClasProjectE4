@@ -1,0 +1,25 @@
+ROOM Lib
+ => Components
+    1- Database
+    2- Entity or Entities
+        table(s)
+    3- Data access objects
+        DAO (CRUD) ->inserting some value, updating some value, deleting some value
+
+    Example
+    Step 1: We created three separate packages RoomDAO, RoomDb, RoomEntities
+    Step 2: We created tables(Entities) of student and teacher
+    Step 3: We created the DAO for student (CRUD)
+    Step 4: We created out Database abstract class
+
+    31-12-21
+    Step 1: we created a method in StudentDb class which will return
+            StudentDao object
+    Step 2: we created xml layout to get student id, name, and email
+    Step 3: we created a view binding object to get all views of xml in kotlin file.
+    Step 4: we create and initialized StudentDb object
+    Step 5: we called the createDb() method inside onCreate() method.
+
+    Important points:
+    <> you will always get DAO object from the database class.
+    <> Room does not allow queries to run on main thread.
