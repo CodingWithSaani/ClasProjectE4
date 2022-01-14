@@ -5,3 +5,11 @@
 -We implemented the Room Lib by adding and getting student data.
 --------------------------------------------------------------------------------------------------------------------------
 <<06 01 22>>
+-Recycler
+    What ?
+    Why ?
+    How to implement?
+
+<<07 01 22>>
+-Recycler
+    Connectivity of RecyclerAdapter to RecyclerView

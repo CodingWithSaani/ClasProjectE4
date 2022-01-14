@@ -1,6 +1,6 @@
 package com.tutorials180.clasprojecte4.SimpleRoomImplementation.RVFiles
 
-import android.content.Context
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tutorials180.clasprojecte4.R
 import com.tutorials180.clasprojecte4.SimpleRoomImplementation.RoomEntities.Student
 
-class RVCustomAdapter(context:Context,val studentList:List<Student>):RecyclerView.Adapter<RVCustomAdapter.SingleRowViewHolder>()
+class RVCustomAdapter(val studentList:List<Student>):RecyclerView.Adapter<RVCustomAdapter.SingleRowViewHolder>()
 {
     class SingleRowViewHolder(singleRow: View): RecyclerView.ViewHolder(singleRow)
     {

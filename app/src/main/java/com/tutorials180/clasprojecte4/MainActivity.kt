@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.tutorials180.clasprojecte4.AdaptersWork.ListTaskOne
 import com.tutorials180.clasprojecte4.Dialogs.AlertDialogScreen
+import com.tutorials180.clasprojecte4.LocationWorking.LocationWorkingActivity
 import com.tutorials180.clasprojecte4.SimpleRoomImplementation.SimpleRoomImpActivity
 
 class MainActivity : AppCompatActivity()
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity()
     private lateinit var moveToListScreen:Button
     private lateinit var moveToRoomScreen:Button //Declare
 
+    private lateinit var moveToLocationScreenBtn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity()
        moveToListScreen=findViewById(R.id.move_to_list_screen_btn)
        moveToRoomScreen=findViewById(R.id.move_to_room_screen_btn)
 
+       moveToLocationScreenBtn=findViewById(R.id.move_to_location_screen_btn)
+       moveToLocationScreenBtn.setOnClickListener {
+           startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
+       }
        moveToRoomScreen.setOnClickListener {
            startActivity(Intent(MainActivity@this,SimpleRoomImpActivity::class.java))
        }

@@ -24,3 +24,15 @@ Step 4: Create a new class with name RVCustomAdapter inside RVFiles package.
                   4.1.1 - We created a constructor with one view member(This view member basically hold the views inside our rv_single_row.xml)
                   4.1.2 - We inherited RecyclerView.ViewHolder(singleRow) inside our SingleRowViewHolder class.
         Step 4.2) We passed context variable and student list to constructor of our RVCustomAdapter class.
+        Step 4.3) Inherit the RecyclerView.Adapter class in RVCustomAdapter class. and specify its view holder type.
+                  View Holder type will be reference to the class that we have created for the purpose of holding our views so in this case
+                  it will SingleRowViewHolder class, which is the inner class of RVCustomAdapter class.
+        Step 4.5) Now call the empty constructor of RecyclerView.Adapter class.
+        Step 4.6) Implemented the method inside RVCustomAdapter class
+                    i)onCreateViewHolder: This method will only called once, when the object of RVCustomAdapter class will created.
+                                          This method will return the object of our view holder class. In this case SingleRowViewHolder.
+                   ii)onBindViewHolder:   This method is used to bind the data to views, in our example, data will be list of students.
+                                          which we have passed as a parameter to the constructor of RVCustomAdapter class.
+                  iii)getItemCount:       This method will return number items that we want to display on recyclerView, we can get this count
+                                          by call size() method on our list of students, which we have passed as a parameter to the constructor
+                                          of RVCustomAdapter class.

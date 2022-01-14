@@ -3,8 +3,10 @@ package com.tutorials180.clasprojecte4.SimpleRoomImplementation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.tutorials180.clasprojecte4.R
+import com.tutorials180.clasprojecte4.SimpleRoomImplementation.RVFiles.RVCustomAdapter
 import com.tutorials180.clasprojecte4.SimpleRoomImplementation.RoomDb.StudentDb
 import com.tutorials180.clasprojecte4.SimpleRoomImplementation.RoomEntities.Student
 import com.tutorials180.clasprojecte4.databinding.ActivitySimpleRoomImpBinding
@@ -24,6 +26,7 @@ class SimpleRoomImpActivity : AppCompatActivity()
         mSimpleRoomBinding.roomStdSaveRecordBtn.setOnClickListener { addStudentData() }
 
         mSimpleRoomBinding.roomStdFetchRecordBtn.setOnClickListener { getStudentsData() }
+        mSimpleRoomBinding.roomStdFetchRecordForRvBtn.setOnClickListener { getStudentDataIntoRecyclerView() }
     }
 
     private fun getStudentsData()
@@ -42,6 +45,29 @@ class SimpleRoomImpActivity : AppCompatActivity()
             else
             {
                 Toast.makeText(applicationContext,"No record found",Toast.LENGTH_LONG).show()
+            }
+        }
+        catch (ex:Exception)
+        {
+            Toast.makeText(applicationContext,ex.message,Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun getStudentDataIntoRecyclerView()
+    {
+        try
+        {
+            val studentList=mStudentDb.getStudentDaoObject().getAllStudents()
+
+            if(studentList.isNotEmpty()) {
+                mSimpleRoomBinding.roomStdRv.layoutManager =
+                    LinearLayoutManager(SimpleRoomImpActivity@ this)
+
+                mSimpleRoomBinding.roomStdRv.adapter = RVCustomAdapter(studentList)
+            }
+            else
+            {
+                Toast.makeText(applicationContext,"No student record found",Toast.LENGTH_LONG).show()
             }
         }
         catch (ex:Exception)

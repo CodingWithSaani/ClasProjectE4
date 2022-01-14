@@ -58,13 +58,23 @@
         android:layout_marginEnd="10dp"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/room_std_fetch_record_for_rv_btn"
+        android:text="Fetch Students Data For RV"
+        android:layout_below="@id/room_std_fetch_record_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/room_std_rv"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_below="@id/room_std_fetch_record_btn"/>
+        android:layout_below="@id/room_std_fetch_record_for_rv_btn"/>
 
 
 
