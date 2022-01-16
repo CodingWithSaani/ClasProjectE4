@@ -37,4 +37,15 @@
         android:text="LNG:"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/lw_address_details_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lw_lng_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="Address:"
+        android:textSize="20sp" />
+
 </RelativeLayout>

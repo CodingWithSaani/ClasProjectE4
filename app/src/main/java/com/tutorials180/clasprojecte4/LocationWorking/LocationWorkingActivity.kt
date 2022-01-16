@@ -64,6 +64,8 @@ class LocationWorkingActivity : AppCompatActivity(),LocationListener
     {
         mLocationWorkingBinding.lwLatTv.text=currentLocation.latitude.toString()
         mLocationWorkingBinding.lwLngTv.text=currentLocation.longitude.toString()
+
+        doReverseGeoCoding(currentLocation)
     }
 
 
@@ -89,12 +91,34 @@ class LocationWorkingActivity : AppCompatActivity(),LocationListener
         try
         {
             val addressDetails=mGeoCoder.getFromLocation(currentLocation.latitude,currentLocation.longitude,1)
+            //14S1
+            val add=addressDetails[0].getAddressLine(0)
+            val town=addressDetails[0].subLocality
+
+            val city=addressDetails[0].locality
+            val province=addressDetails[0].adminArea
+
+            val zipCode=addressDetails[0].postalCode
+            val country=addressDetails[0].countryName
+            val addressFinal="Address:${add}\nTown:${town}\n" +
+                    "City:${city}\nZipCode:${zipCode}Province:${province}" +
+                    "Country:${country}"
+
+            mLocationWorkingBinding.lwAddressDetailsTv.text=addressFinal
+
         }
         catch (ex:Exception)
         {
             Toast.makeText(applicationContext,"Permission Not Granted",Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
+
+
+
+
 
 
 

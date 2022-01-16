@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.tutorials180.clasprojecte4.AdaptersWork.ListTaskOne
 import com.tutorials180.clasprojecte4.Dialogs.AlertDialogScreen
 import com.tutorials180.clasprojecte4.LocationWorking.LocationWorkingActivity
+import com.tutorials180.clasprojecte4.SMSWorking.SMSWorkingActivity
 import com.tutorials180.clasprojecte4.SimpleRoomImplementation.SimpleRoomImpActivity
 
 class MainActivity : AppCompatActivity()
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity()
     private lateinit var moveToRoomScreen:Button //Declare
 
     private lateinit var moveToLocationScreenBtn:Button
+    private lateinit var moveToSMSScreenBtn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +39,11 @@ class MainActivity : AppCompatActivity()
        moveToRoomScreen=findViewById(R.id.move_to_room_screen_btn)
 
        moveToLocationScreenBtn=findViewById(R.id.move_to_location_screen_btn)
+       moveToSMSScreenBtn=findViewById(R.id.move_to_sms_screen_btn)
+
+       moveToSMSScreenBtn.setOnClickListener {
+            startActivity(Intent(MainActivity@this,SMSWorkingActivity::class.java))
+       }
        moveToLocationScreenBtn.setOnClickListener {
            startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
        }

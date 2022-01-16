@@ -50,6 +50,14 @@
         android:layout_below="@id/move_to_room_screen_btn"
         android:layout_centerInParent="true"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/move_to_sms_screen_btn"
+        android:text="Move to SMS Page"
+        android:layout_below="@id/move_to_location_screen_btn"
+        android:layout_centerInParent="true"/>
+
 
 
 
