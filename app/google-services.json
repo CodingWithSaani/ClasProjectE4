@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "378937330331",
+    "project_id": "bscse4f21",
+    "storage_bucket": "bscse4f21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378937330331:android:096a70a7455e3f5afbd43e",
+        "android_client_info": {
+          "package_name": "com.tutorials180.clasprojecte4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378937330331-ajrnikporn83ubdl82o0trheac97vh33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpnsEOT7XI5jD-XNpw1_CGNkFL83ecrt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378937330331-ajrnikporn83ubdl82o0trheac97vh33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
