@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirebaseWorking.FirebaseWorkingActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_add_single_document_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Add Single Document"/>
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fb_add_single_document_id_btn"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:text="Add Single Document With ID"
+    android:layout_below="@id/fb_add_single_document_btn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_get_single_document_id_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Get Single Document With ID"
+        android:layout_below="@id/fb_add_single_document_id_btn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_get_documents_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Get Documents"
+        android:textAllCaps="false"
+        android:layout_below="@id/fb_get_single_document_id_btn"/>
+</RelativeLayout>
