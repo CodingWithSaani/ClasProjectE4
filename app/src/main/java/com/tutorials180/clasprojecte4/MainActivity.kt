@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.tutorials180.clasprojecte4.AdaptersWork.ListTaskOne
 import com.tutorials180.clasprojecte4.Dialogs.AlertDialogScreen
+import com.tutorials180.clasprojecte4.FirebaseWorking.FbAuthService.FbAuthActivity
 import com.tutorials180.clasprojecte4.FirebaseWorking.FirebaseWorkingActivity
 import com.tutorials180.clasprojecte4.LocationWorking.LocationWorkingActivity
 import com.tutorials180.clasprojecte4.SMSWorking.SMSWorkingActivity
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity()
 
        moveToSMSScreenBtn.setOnClickListener {
 //            startActivity(Intent(MainActivity@this,SMSWorkingActivity::class.java))
-           startActivity(Intent(MainActivity@this,FirebaseWorkingActivity::class.java))
+           //startActivity(Intent(MainActivity@this,FirebaseWorkingActivity::class.java))
+           startActivity(Intent(MainActivity@this,FbAuthActivity::class.java))
        }
        moveToLocationScreenBtn.setOnClickListener {
            startActivity(Intent(MainActivity@this,LocationWorkingActivity::class.java))
